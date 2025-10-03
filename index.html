@@ -23,6 +23,7 @@
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
       overflow: hidden;
       animation: fadeIn 1s ease-in;
+      position: relative;
     }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(30px); }
@@ -33,6 +34,7 @@
       padding: 30px 20px;
       text-align: center;
       color: white;
+      position: relative;
     }
     .header h1 {
       font-size: 28px;
@@ -44,6 +46,24 @@
       animation: pulse 1.5s ease-in-out infinite;
     }
     @keyframes pulse { 0%,100% { transform: scale(1) } 50% { transform: scale(1.1) } }
+
+    /* Botão discreto de áudio */
+    #playAudio {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(255,255,255,0.7);
+      border: none;
+      border-radius: 20px;
+      padding: 8px 12px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+    #playAudio:hover {
+      background: rgba(255,255,255,0.9);
+    }
+
     .foto-container {
       padding: 20px;
       text-align: center;
@@ -82,9 +102,6 @@
       color: #888;
       margin-top: 10px;
     }
-    video {
-      display: none; /* ou display:block se quiser mostrar vídeo na página */
-    }
   </style>
 </head>
 <body>
@@ -92,16 +109,18 @@
     <div class="header">
       <h1>Para Você, Meu Amor</h1>
       <div class="hearts">❤️ 💕 ❤️</div>
+      <!-- Botão discreto de áudio -->
+      <button id="playAudio">🎵 Tocar música</button>
     </div>
 
-    <!-- Este vídeo com áudio tocará automaticamente se o navegador permitir -->
-    <video autoplay loop>
-      <source src="https://github.com/alessandropcrleite-bot/teste/raw/refs/heads/main/S%C3%A3o%20Paulo%20(Radio%20Edit)%20-%20Tocanna%20(1080p,%20h264).mp4" type="video/mp4">
-      Seu navegador não suporta vídeo.
-    </video>
+    <!-- Áudio separado -->
+    <audio id="musica">
+      <source src="https://github.com/alessandropcrleite-bot/teste/raw/refs/heads/main/S%C3%A3o%20Paulo%20(Radio%20Edit)%20-%20Tocanna.mp3" type="audio/mp3">
+      Seu navegador não suporta áudio.
+    </audio>
 
     <div class="foto-container">
-      <img src="https://github.com/alessandropcrleite-bot/teste/blob/main/DNL6DJz%20-%20Imgur.jpg?raw=true" alt="Nosso momento especial">
+      <img src="https://github.com/alessandropcrleite-bot/teste/raw/refs/heads/main/DNL6DJz%20-%20Imgur.jpg" alt="Nosso momento especial">
     </div>
 
     <div class="conteudo">
@@ -116,5 +135,15 @@
 
     <div class="footer">✨ Feito com amor ✨</div>
   </div>
+
+  <script>
+    const btn = document.getElementById('playAudio');
+    const musica = document.getElementById('musica');
+
+    btn.addEventListener('click', () => {
+      musica.play();
+      btn.style.display = 'none'; // esconde o botão depois de tocar
+    });
+  </script>
 </body>
 </html>
