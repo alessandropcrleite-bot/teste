@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carta de Amor</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Georgia', serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .carta-container {
+      background: #fff;
+      max-width: 600px;
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      animation: fadeIn 1s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .header {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      padding: 30px 20px;
+      text-align: center;
+      color: white;
+    }
+    .header h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+    .hearts {
+      font-size: 24px;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%,100% { transform: scale(1) } 50% { transform: scale(1.1) } }
+    .foto-container {
+      padding: 20px;
+      text-align: center;
+      background: #fafafa;
+    }
+    .foto-container img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .conteudo {
+      padding: 30px;
+      line-height: 1.8;
+      color: #333;
+      font-size: 16px;
+      text-align: justify;
+    }
+    .assinatura {
+      text-align: right;
+      font-style: italic;
+      margin-top: 30px;
+      color: #666;
+      font-size: 18px;
+    }
+    .footer {
+      background: #f5f5f5;
+      padding: 20px;
+      text-align: center;
+      color: #999;
+      font-size: 14px;
+      border-top: 1px solid #e0e0e0;
+    }
+    .data {
+      font-size: 14px;
+      color: #888;
+      margin-top: 10px;
+    }
+    video {
+      display: none; /* ou display:block se quiser mostrar vídeo na página */
+    }
+  </style>
+</head>
+<body>
+  <div class="carta-container">
+    <div class="header">
+      <h1>Para Você, Meu Amor</h1>
+      <div class="hearts">❤️ 💕 ❤️</div>
+    </div>
+
+    <!-- Este vídeo com áudio tocará automaticamente se o navegador permitir -->
+    <video autoplay loop>
+      <source src="https://github.com/alessandropcrleite-bot/teste/raw/refs/heads/main/S%C3%A3o%20Paulo%20(Radio%20Edit)%20-%20Tocanna%20(1080p,%20h264).mp4" type="video/mp4">
+      Seu navegador não suporta vídeo.
+    </video>
+
+    <div class="foto-container">
+      <img src="https://github.com/alessandropcrleite-bot/teste/blob/main/DNL6DJz%20-%20Imgur.jpg?raw=true" alt="Nosso momento especial">
+    </div>
+
+    <div class="conteudo">
+      <p>Há momentos na vida que ficam gravados no coração para sempre. Momentos que não precisam de palavras rebuscadas, mas que pedem para serem celebrados com simplicidade e verdade.</p>
+      <p>Cada dia ao seu lado é um presente que eu desembrulho com gratidão. Você trouxe cores para dias que pareciam cinzentos, trouxe risos quando eu mais precisava, e acima de tudo, trouxe um amor genuíno que aquece minha alma.</p>
+      <p>Esta carta é apenas uma pequena forma de dizer que você é especial, que seu sorriso ilumina meus dias, e que ter você na minha vida é uma bênção que agradeço todos os dias.</p>
+      <p>Obrigado por ser quem você é, por me aceitar como sou, e por construir comigo essa história tão bonita que estamos vivendo juntos.</p>
+
+      <div class="assinatura">Com todo meu amor,<br>Alessandro</div>
+      <div class="data">03 de Outubro de 2025</div>
+    </div>
+
+    <div class="footer">✨ Feito com amor ✨</div>
+  </div>
+</body>
+</html>
